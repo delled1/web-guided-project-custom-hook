@@ -23,5 +23,5 @@ export const useForm = () => {
     setLastName("");
   };
 
-  return [firstName, handleChanges, handleSubmit, clearForm];
+  return [firstName, handleChanges, handleLastNameChanges, handleSubmit, clearForm];
 }
