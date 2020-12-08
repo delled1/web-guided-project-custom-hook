@@ -19,7 +19,11 @@ export const useLocalStorage = (key, initialValue) => {
   return initialValue;
   });
 
-  // Part two: also update localStorage every time state is update
+  // Part two: also update localStorage every time state is updated
+  const setValue = value => {
+    setStoredValue(value);
+    window.localStorage.setItem(key, JSON.stringify(value));
+  }
 
   return [storedValue, setValue];
 }
