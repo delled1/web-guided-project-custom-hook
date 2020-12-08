@@ -47,7 +47,7 @@ export default function SignupForm() {
             className={classes.textField}
             name="lastName"
             value={values.lastName}
-            onChange={handleLastNameChanges}
+            onChange={handleChanges}
             margin="normal"
             variant="outlined"
           />
