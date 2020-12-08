@@ -16,6 +16,10 @@ export const useLocalStorage = (key, initialValue) => {
   if (window.localStorage.getItem(key)) {
     return JSON.parse(window.localStorage.getItem(key));
   }
+  else {
+    window.localStorage.setItem(key, JSON.stringify(initialValue))
+    return initialValue;
+  }
 
   // Part two: also update localStorage every time state is update
 
