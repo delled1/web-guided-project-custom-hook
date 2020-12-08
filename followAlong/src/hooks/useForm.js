@@ -13,10 +13,6 @@ export const useForm = () => {
     setFirstName(e.target.value);
   };
 
-  const handleLastNameChanges = e => {
-    setLastName(e.target.value);
-  }
-
   const handleSubmit = e => {
     e.preventDefault();
     alert(`${firstName} ${lastName}`);
@@ -27,5 +23,5 @@ export const useForm = () => {
     setValues(initialValues);
   };
 
-  return [firstName, lastName, handleChanges, handleLastNameChanges, handleSubmit, clearForm];
+  return [values, handleChanges, handleSubmit, clearForm];
 }
