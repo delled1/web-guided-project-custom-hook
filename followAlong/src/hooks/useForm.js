@@ -12,7 +12,7 @@ export const useForm = () => {
   const handleChanges = e => {
     setValues({
       ...values,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value // computed property name
     })
   };
 
