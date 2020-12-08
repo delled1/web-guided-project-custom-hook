@@ -12,7 +12,7 @@ export const useForm = () => {
   const handleChanges = e => {
     setValues({
       ...values,
-      firstName: "asdf" 
+      [e.target.name]: e.target.value
     })
   };
 
