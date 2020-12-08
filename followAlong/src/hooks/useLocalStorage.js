@@ -8,4 +8,10 @@ import {useState} from "react";
 // Otherwise, initialize with the initialValue passed in
 // Then, every time we update state, also update localStorage to keep it in sync
 
-export const useLocalStorage = (key, initialValue)
+export const useLocalStorage = (key, initialValue) => {
+  const [storedValue, setStoredValue] = useState(initialValue);
+
+  // do some cool stuff (after the break...)
+
+  return [storedValue, setValue]
+}
