@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 
+const initialValues = {
+  firstName: "",
+  lastName: ""
+}
+
 export const useForm = () => {
 
-  const [values, setValues] = useState({
-    firstName: "",
-    lastName: ""
-  })
+  const [values, setValues] = useState(initialValues);
 
   const handleChanges = e => {
     setFirstName(e.target.value);
@@ -22,8 +24,7 @@ export const useForm = () => {
 
   const clearForm = e => {
     e.preventDefault();
-    setFirstName("");
-    setLastName("");
+    setValues(initialValues);
   };
 
   return [firstName, lastName, handleChanges, handleLastNameChanges, handleSubmit, clearForm];
