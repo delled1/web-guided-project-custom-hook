@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 
-const initialValues = {
-  firstName: "",
-  lastName: ""
-}
-
-export const useForm = () => {
+export const useForm = (initialValues) => {
 
   const [values, setValues] = useState(initialValues);
 
