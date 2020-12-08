@@ -10,7 +10,10 @@ export const useForm = () => {
   const [values, setValues] = useState(initialValues);
 
   const handleChanges = e => {
-    setFirstName(e.target.value);
+    setValues({
+      ...values,
+      firstName: "asdf" 
+    })
   };
 
   const handleSubmit = e => {
