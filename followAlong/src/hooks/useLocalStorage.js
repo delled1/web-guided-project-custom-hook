@@ -9,17 +9,17 @@ import {useState} from "react";
 // Then, every time we update state, also update localStorage to keep it in sync
 
 export const useLocalStorage = (key, initialValue) => {
-  const [storedValue, setStoredValue] = useState(initialValue);
-
   // Part one: initialization step
   // If the value is in localStorage, use it. Otherwise use initial value
+  const [storedValue, setStoredValue] = useState(() => {
   if (window.localStorage.getItem(key)) {
     return JSON.parse(window.localStorage.getItem(key));
   }
   else {
-    window.localStorage.setItem(key, JSON.stringify(initialValue))
+    window.localStorage.setItem(key, JSON.stringify(initialValue));
     return initialValue;
   }
+  });
 
   // Part two: also update localStorage every time state is update
 
