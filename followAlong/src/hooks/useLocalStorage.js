@@ -13,5 +13,5 @@ export const useLocalStorage = (key, initialValue) => {
 
   // do some cool stuff (after the break...)
 
-  return [storedValue, setValue]
+  return [storedValue, setValue];
 }
