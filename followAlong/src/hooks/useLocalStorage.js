@@ -1,5 +1,7 @@
 import {useState} from "react";
 
+// Add localStorage power to useState (same functionality otherwise)
+
 // Requirements:
 // same format as useState from the component's perspective
 // If the value is already saved in localStorage (e.g., form already started), use those values
