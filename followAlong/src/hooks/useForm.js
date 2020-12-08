@@ -14,7 +14,7 @@ export const useForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    alert(firstName, lastName);
+    alert(`${firstName} ${lastName}`);
   };
 
   const clearForm = e => {
